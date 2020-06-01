@@ -9,3 +9,9 @@ az storage account create `
     -n $acct `
     -l $location `
     --sku Standard_LRS
+
+az storage account show-connection-string `
+    -n $acct `
+    --query "connectionString"
+
+az group delete -n $rg
